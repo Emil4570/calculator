@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+<!--<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>-->
+<div class="col" id="app">
+    <div class="history2" id="block" >
+        <h1 class="h1-item" v-for="item in history">{{item}}</h1>
+    </div>
+    <div class="input">
+        <input type="text" name="output" class="out" v-model="text">
+    </div>
+    <div class="control">
+        <div class="line">
+            <div class="l-control">
+                <button id="clear" @click="this.text=''"><i class="fa-solid fa-c"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C7" @click="this.text+='7'"><i class="fa-solid fa-7"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C4" @click="this.text+='4'"><i class="fa-solid fa-4"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C1" @click="this.text+='1'"><i class="fa-solid fa-1"></i></button>
+            </div>
+            <div class="l-control">
+                <button class='disabled':title="message" @click="history_clear"><i class="fa-solid fa-ban"></i></button>
+            </div>
+        </div>
+        <div class="line">
+            <div class="l-control">
+                <button id="delete" @click="delet"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C8" @click="this.text+='8'"><i class="fa-solid fa-8"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C5" @click="this.text+='5'"><i class="fa-solid fa-5"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C2" @click="this.text+='2'"><i class="fa-solid fa-2"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C0" @click="this.text+='0'"><i class="fa-solid fa-0"></i></button>
+            </div>
+        </div>
+        <div class="line">
+            <div class="l-control">
+                <button id="C^ "@click="this.text+='^'"><i class="fa-solid fa-superscript"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C9" @click="this.text+='9'"><i class="fa-solid fa-9"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C6" @click="this.text+='6'"><i class="fa-solid fa-6"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C3" @click="this.text+='3'"><i class="fa-solid fa-3"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C." @click="this.text+='.'"><i class="fa-solid fa-circle"></i></button>
+            </div>
+        </div>
+        <div class="line">
+            <div class="l-control">
+                <button id="C/" @click="this.text+='/'"><i class="fa-solid fa-divide"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C*" @click="this.text+='*'"><i class="fa-brands fa-sticker-mule"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C-" @click="this.text+='-'"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C+" @click="this.text+='+'"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="equal" @click="equal"><i class="fa-solid fa-equals"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="main.js"></script>
+
+</body>
+</html>
