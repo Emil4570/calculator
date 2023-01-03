@@ -21,16 +21,16 @@
     <div class="control">
         <div class="line">
             <div class="l-control">
-                <button id="clear" @click="this.text=''"><i class="fa-solid fa-c"></i></button>
+                <button id="clear" @click="clea"><i class="fa-solid fa-c"></i></button>
             </div>
             <div class="l-control">
-                <button id="C7" @click="this.text+='7'"><i class="fa-solid fa-7"></i></button>
+                <button id="C7" @click="addVis('7')"><i class="fa-solid fa-7"></i></button>
             </div>
             <div class="l-control">
-                <button id="C4" @click="this.text+='4'"><i class="fa-solid fa-4"></i></button>
+                <button id="C4" @click="addVis('4')"><i class="fa-solid fa-4"></i></button>
             </div>
             <div class="l-control">
-                <button id="C1" @click="this.text+='1'"><i class="fa-solid fa-1"></i></button>
+                <button id="C1" @click="addVis('1')"><i class="fa-solid fa-1"></i></button>
             </div>
             <div class="l-control">
                 <button class='disabled':title="message" @click="history_clear"><i class="fa-solid fa-ban"></i></button>
@@ -41,47 +41,47 @@
                 <button id="delete" @click="delet"><i class="fa-solid fa-delete-left"></i></button>
             </div>
             <div class="l-control">
-                <button id="C8" @click="this.text+='8'"><i class="fa-solid fa-8"></i></button>
+                <button id="C8" @click="addVis('8')"><i class="fa-solid fa-8"></i></button>
             </div>
             <div class="l-control">
-                <button id="C5" @click="this.text+='5'"><i class="fa-solid fa-5"></i></button>
+                <button id="C5" @click="addVis('5')"><i class="fa-solid fa-5"></i></button>
             </div>
             <div class="l-control">
-                <button id="C2" @click="this.text+='2'"><i class="fa-solid fa-2"></i></button>
+                <button id="C2" @click="addVis('2')"><i class="fa-solid fa-2"></i></button>
             </div>
             <div class="l-control">
-                <button id="C0" @click="this.text+='0'"><i class="fa-solid fa-0"></i></button>
-            </div>
-        </div>
-        <div class="line">
-            <div class="l-control">
-                <button id="C^ "@click="this.text+='^'"><i class="fa-solid fa-superscript"></i></button>
-            </div>
-            <div class="l-control">
-                <button id="C9" @click="this.text+='9'"><i class="fa-solid fa-9"></i></button>
-            </div>
-            <div class="l-control">
-                <button id="C6" @click="this.text+='6'"><i class="fa-solid fa-6"></i></button>
-            </div>
-            <div class="l-control">
-                <button id="C3" @click="this.text+='3'"><i class="fa-solid fa-3"></i></button>
-            </div>
-            <div class="l-control">
-                <button id="C." @click="this.text+='.'"><i class="fa-solid fa-circle"></i></button>
+                <button id="C0" @click="addVis('0')"><i class="fa-solid fa-0"></i></button>
             </div>
         </div>
         <div class="line">
             <div class="l-control">
-                <button id="C/" @click="this.text+='/'"><i class="fa-solid fa-divide"></i></button>
+                <button id="C^ "@click="addVis('^')"><i class="fa-solid fa-superscript"></i></button>
             </div>
             <div class="l-control">
-                <button id="C*" @click="this.text+='*'"><i class="fa-brands fa-sticker-mule"></i></button>
+                <button id="C9" @click="addVis('9')"><i class="fa-solid fa-9"></i></button>
             </div>
             <div class="l-control">
-                <button id="C-" @click="this.text+='-'"><i class="fa-solid fa-minus"></i></button>
+                <button id="C6" @click="addVis('6')"><i class="fa-solid fa-6"></i></button>
             </div>
             <div class="l-control">
-                <button id="C+" @click="this.text+='+'"><i class="fa-solid fa-plus"></i></button>
+                <button id="C3" @click="addVis('3')"><i class="fa-solid fa-3"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C." @click="addSpec('.')"><i class="fa-solid fa-circle"></i></button>
+            </div>
+        </div>
+        <div class="line">
+            <div class="l-control">
+                <button id="C/" @click="addSpec('/')"><i class="fa-solid fa-divide"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C*" @click="addSpec('*')"><i class="fa-brands fa-sticker-mule"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C-" @click="addSpec('-')"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="l-control">
+                <button id="C+" @click="addSpec('+')"><i class="fa-solid fa-plus"></i></button>
             </div>
             <div class="l-control">
                 <button id="equal" @click="equal"><i class="fa-solid fa-equals"></i></button>
