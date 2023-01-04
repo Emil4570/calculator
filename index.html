@@ -13,7 +13,7 @@
 <!--<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>-->
 <div class="col" id="app">
     <div class="history2" id="block" >
-        <h1 class="h1-item" v-for="item in history">{{item}}</h1>
+        <h1 class="h1-item"v-for="item in history" @click="history_click(item)">{{item}}</h1>
     </div>
     <div class="input">
         <input type="text" name="output" class="out" v-model="text">
@@ -55,7 +55,7 @@
         </div>
         <div class="line">
             <div class="l-control">
-                <button id="C^ "@click="addVis('^')"><i class="fa-solid fa-superscript"></i></button>
+                <button id="C^ "@click="addSpec('^')"><i class="fa-solid fa-superscript"></i></button>
             </div>
             <div class="l-control">
                 <button id="C9" @click="addVis('9')"><i class="fa-solid fa-9"></i></button>

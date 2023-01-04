@@ -57,6 +57,9 @@ const app = Vue.createApp({
         clea(){
             this.text = ""
             this.eq = false
+        },
+        history_click(elem){
+            this.text = elem.split("").slice(elem.split('').indexOf('=')+1).join("")
         }
     }
 }).mount('#app')
